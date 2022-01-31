@@ -84,6 +84,7 @@ public class BlobCollision : MonoBehaviour
     public void DebugIntersection(Vector2Int min, Vector2Int max)
     {
         var scene = GetRTPixels(SceneRender);
+        Destroy(scene);
         var pixels = scene.GetPixels();
         for (int y = min.y; y < max.y; ++y)
         {
@@ -190,6 +191,7 @@ public class BlobCollision : MonoBehaviour
         var middle = new Vector2(blobPosition.x, blobPosition.y);
 
         var scene = GetRTPixels(SceneRender);
+        Destroy(scene);
         var screenPixels = scene.GetPixels();
         Debug.Assert(screenPixels.Length == Screen.width * Screen.height);
         for (int y = min.y; y < max.y; ++y)
